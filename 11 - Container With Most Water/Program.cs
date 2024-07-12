@@ -15,9 +15,13 @@ class Program
 public class Solution {
     public int MaxArea(int[] height) {
         int maxSeen=-1;
-        for(int i=0;i<height.Length-1;i++) {
-            for (int j=i+1;j<height.Length;j++) {
-                maxSeen = Math.Max(maxSeen, (j-i) * Math.Min(height[i],height[j]));
+        int i=0, j=height.Length-1;
+        while(i!=j) {
+            maxSeen = Math.Max(maxSeen, (j-i) * Math.Min(height[i],height[j]));
+            if(height[i] < height[j]) {
+                i++;
+            } else {
+                j--;
             }
         }
         return maxSeen;
