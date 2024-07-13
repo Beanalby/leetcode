@@ -22,31 +22,33 @@ public class Solution {
         {'8', ["t", "u", "v"]},
         {'9', ["w", "x", "y", "z"]},
     };
-    public void AddDigits(List<string> results, string digits, string prefix, int pos) {
-        int len = digits.Length;
-        // short circuit special case
-        if(len == 0) {
+    public void PopulateDigits(Dictionary<int, string[]> memos, string digits, int pos) {
+        if(memos.ContainsKey(pos)) {
             return;
         }
+        // need to populate it
+        // if it's the last spot, just load it up directly
         if(pos == digits.Length-1) {
-            // last thing to add, just plop its digits on the end
-            foreach(string s in digitToLetters[digits[pos]]) {
-                results.Add(prefix + s);
-            }
+            memos.Add(pos, digitToLetters[digits[pos]]);
             return;
         } else {
-            // need to recursively add further digts
-            string newPrefix;
-            foreach(string s in digitToLetters[digits[pos]]) {
-                newPrefix = prefix + s;
-                AddDigits(results, digits, newPrefix, pos+1);
+            // populate recursively.
+            // Make sure the next spot's been done first, then use it
+            PopulateDigits(memos, digits, pos+1);
+            List<string> l = new();
+            foreach(String prefix in digitToLetters[digits[pos]]) {
+                foreach(String suffix in memos[pos+1]) {
+                    l.Add(prefix + suffix);
+                }
             }
+            memos.Add(pos, l.ToArray());
         }
     }
 
     public IList<string> LetterCombinations(string digits) {
-        List<string> results = new();
-        AddDigits(results, digits, "", 0);
-        return results;
+        Dictionary<int, string[]> memos = new();
+        // AddDigits(memos, results, digits, "", 0);
+        PopulateDigits(memos, digits, 0);
+        return memos[0];
     }
 }
