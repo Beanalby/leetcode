@@ -3,7 +3,7 @@
 class Program
 {
     static void Main(string[] args) {
-        string[] problems = ["2", "23", "2222"];
+        string[] problems = ["", "2", "23", "2222"];
         Solution s = new();
         foreach(var problem in problems) {
             Console.WriteLine($"{problem} -> [{String.Join(",",s.LetterCombinations(problem))}]");
@@ -23,12 +23,15 @@ public class Solution {
         {'9', ["w", "x", "y", "z"]},
     };
     public void PopulateDigits(Dictionary<int, string[]> memos, string digits, int pos) {
-        if(memos.ContainsKey(pos)) {
+        int len = digits.Length;
+        // catch edge case
+        if(len == 0) {
+            memos.Add(0, []);
             return;
         }
-        // need to populate it
+
         // if it's the last spot, just load it up directly
-        if(pos == digits.Length-1) {
+        if(pos == len-1) {
             memos.Add(pos, digitToLetters[digits[pos]]);
             return;
         } else {
