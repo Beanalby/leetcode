@@ -24,6 +24,7 @@ class Program
         List<(int[], int)> problems = [
                 ([1,0,-1,0,-2,2], 0),
                 ([2,2,2,2,2], 8),
+                ([1,-2,-5,-4,-3,3,3,5], -11)
             ];
         foreach(var problem in problems) {
             Console.WriteLine($"[{String.Join(",", problem.Item1)}],{problem.Item2} -> {formatAnswer(s.FourSum(problem.Item1, problem.Item2))}");
@@ -36,9 +37,12 @@ public class Solution {
         HashSet<(int,int,int,int)> result = new();
         Array.Sort(nums);
         int k, l, sum, len=nums.Length;
-        // stop early when nums[i] is greater than target - can't have
-        // a solution involving all 4 numbers bigger than it
-        for(int i=0;i<nums.Length-3 && nums[i] <= target;i++) {
+        for(int i=0;i<nums.Length-3;i++) {
+            // short-circuit - if we're left with only positive numbers
+            // that are greater than the target, we cna stop looking
+            if(nums[i] > 0 && nums[i] > target) {
+                break;
+            }
             for(int j=i+1;j<nums.Length-2; j++) {
                 // if the first two digits are the same as they were
                 // last time, don't need to bother looking.  We already
