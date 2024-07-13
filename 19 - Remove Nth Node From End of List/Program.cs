@@ -44,25 +44,20 @@ class Program
 
 public class Solution {
     public ListNode? RemoveNthFromEnd(ListNode? head, int n) {
-        Queue<ListNode> queue = new(n+1);
-        ListNode? walker = head;
-        while(walker!=null) {
-            // if queue is already full, pop off one
-            if(queue.Count == n+1) {
-                queue.Dequeue();
-            }
-            queue.Enqueue(walker);
-            walker = walker?.next;
-        };
-        Console.WriteLine($"Walked list, left with {Program.formatListNode(queue.First())}");
-        // if there's less than n+1 things in the queue,
-        // then we gotta chop off the head
-        if(queue.Count < n+1) {
+        ListNode? walkFar = head, walkNear = head;
+        for(int i=0;i<n;i++) {
+            walkFar = walkFar?.next;
+        }
+        if(walkFar==null) {
+            // removing the head
             return head?.next;
-        } else {
-            // n+1 items in the queue, grab the first item, and remove the next link
-            ListNode nodeBeforeRemoval = queue.First();
-            nodeBeforeRemoval.next = nodeBeforeRemoval?.next?.next;
+        }
+        while(walkFar?.next !=null) {
+            walkFar = walkFar.next;
+            walkNear = walkNear?.next;
+        }
+        if(walkNear?.next!=null) {
+            walkNear.next = walkNear?.next?.next;
         }
         return head;
     }
