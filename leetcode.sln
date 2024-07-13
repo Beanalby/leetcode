@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18 - 4Sum", "18 - 4Sum\18 -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19 - Remove Nth Node From End of List", "19 - Remove Nth Node From End of List\19 - Remove Nth Node From End of List.csproj", "{44E460F9-77B0-4869-BB46-873E0E6FE35B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20 - Valid Parenthesis", "20 - Valid Parenthesis\20 - Valid Parenthesis.csproj", "{6DFAB7F9-7DDE-4A7B-82B5-2316C5BCADE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{44E460F9-77B0-4869-BB46-873E0E6FE35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44E460F9-77B0-4869-BB46-873E0E6FE35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44E460F9-77B0-4869-BB46-873E0E6FE35B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DFAB7F9-7DDE-4A7B-82B5-2316C5BCADE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DFAB7F9-7DDE-4A7B-82B5-2316C5BCADE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DFAB7F9-7DDE-4A7B-82B5-2316C5BCADE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DFAB7F9-7DDE-4A7B-82B5-2316C5BCADE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
