@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14 - Longest Common Prefix"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15 - 3Sum", "15 - 3Sum\15 - 3Sum.csproj", "{74BB469A-F53E-4A2A-AB0B-2F13FAE0E56A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16 - 3Sum Closest", "16 - 3Sum Closest\16 - 3Sum Closest.csproj", "{2B70A620-5854-41C6-ABE7-3F534173A081}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{74BB469A-F53E-4A2A-AB0B-2F13FAE0E56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74BB469A-F53E-4A2A-AB0B-2F13FAE0E56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74BB469A-F53E-4A2A-AB0B-2F13FAE0E56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B70A620-5854-41C6-ABE7-3F534173A081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B70A620-5854-41C6-ABE7-3F534173A081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B70A620-5854-41C6-ABE7-3F534173A081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B70A620-5854-41C6-ABE7-3F534173A081}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
