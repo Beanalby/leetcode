@@ -74,23 +74,9 @@ public class Solution {
             }
         }
     }
-    public class answer: List<int> {
-        public override int GetHashCode()
-        {
-            // this structure contains 3 numbers, which add up
-            // to 0.  Shifting the first number halfway and
-            // adding to the 2nd number feels like a decent
-            // heuristic to avoid frequent collisions
-            return this[0]<<16 + this[1];
-        }
-        public override bool Equals(object? obj)
-        {
-            // compare the individual array elements
-            return (obj==null) ? false :this.SequenceEqual((answer)obj);
-        }
-    }
+
     public IList<IList<int>> ThreeSum(int[] nums) {
-        HashSet<IList<int>> result = new HashSet<IList<int>>();
+        HashSet<(int,int,int)> result = new();
         Array.Sort(nums);
         for(int i=0;i<nums.Length-2; i++) {
             for(int j=i+1; j<nums.Length-1; j++) {
@@ -102,14 +88,10 @@ public class Solution {
                     continue;
                 }
                 if(-1 != binSearch(nums, j+1, target)) {
-                    // Console.WriteLine($"{nums[i]},{nums[j]} FOUND target={target}");
-                    result.Add(new answer {nums[i], nums[j], target});
-                } else {
-                    // Console.WriteLine($"{nums[i]},{nums[j]} missing target={target}");
+                    result.Add( (nums[i], nums[j], target));
                 }
             }
-            
         }
-        return result.ToList();
+        return result.Select<(int, int, int), IList<int>>(t => [t.Item1, t.Item2, t.Item3]).ToList();
     }
 }
