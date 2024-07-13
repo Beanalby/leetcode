@@ -6,6 +6,7 @@ class Program
     {
         Solution s = new();
         string[] problems = [
+            "]",
             "([{()[]}][])",
             "()[]{}",
             "(]",
@@ -19,29 +20,34 @@ class Program
 public class Solution {
     public bool IsValid(string s) {
         Stack<char> stack = new();
-        foreach(char c in s) {
-            switch(c) {
-                case '(':
-                case '[':
-                case '{':
-                    stack.Push(c);
-                    break;
-                case ')':
-                    if(stack.Pop()!='(') {
-                        return false;
-                    }
-                    break;
-                case ']':
-                    if(stack.Pop()!='[') {
-                        return false;
-                    }
-                    break;
-                case '}':
-                    if(stack.Pop()!='{') {
-                        return false;
-                    }
-                    break;
+        try {
+            foreach(char c in s) {
+                switch(c) {
+                    case '(':
+                    case '[':
+                    case '{':
+                        stack.Push(c);
+                        break;
+                    case ')':
+                        if(stack.Pop()!='(') {
+                            return false;
+                        }
+                        break;
+                    case ']':
+                        if(stack.Pop()!='[') {
+                            return false;
+                        }
+                        break;
+                    case '}':
+                        if(stack.Pop()!='{') {
+                            return false;
+                        }
+                        break;
+                }
             }
+        } catch(InvalidOperationException e) {
+            // tried to pop when the stack is empty
+            return false;
         }
         return stack.Count==0;
     }
