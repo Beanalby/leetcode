@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27 - Remove Element", "27 -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28 Find the Index of the First Occurrence in a String", "28 Find the Index of the First Occurrence in a String\28 Find the Index of the First Occurrence in a String.csproj", "{F66F1DCE-91A2-47AC-BE05-8804A75E6B8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29 - Divided Two Integers", "29 - Divided Two Integers\29 - Divided Two Integers.csproj", "{4504745C-6752-41BF-B085-3BC1AC26F6E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{F66F1DCE-91A2-47AC-BE05-8804A75E6B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F66F1DCE-91A2-47AC-BE05-8804A75E6B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F66F1DCE-91A2-47AC-BE05-8804A75E6B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4504745C-6752-41BF-B085-3BC1AC26F6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4504745C-6752-41BF-B085-3BC1AC26F6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4504745C-6752-41BF-B085-3BC1AC26F6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4504745C-6752-41BF-B085-3BC1AC26F6E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
