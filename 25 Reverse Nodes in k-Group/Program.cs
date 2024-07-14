@@ -38,7 +38,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<(ListNode?,int)> problems = [
+        List<(ListNode,int)> problems = [
             (new ListNode([1,2]), 2),
             (new ListNode([1,2,3,4,5]), 1),
             (new ListNode([1,2,3,4,5]), 2),
@@ -68,9 +68,10 @@ public class Solution {
             }
             current = current.next;
         }
+        // we checked for nulls above, don't worry about it in below blocks
+        #nullable disable
+
         // we've got enough nodes to do the swap
-        #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-        #pragma warning disable CS8602 // Dereference of a possibly null reference.
         current = previous;
         a = current.next;
         b = a.next;
@@ -90,8 +91,7 @@ public class Solution {
             }
         }
         return true;
-        #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-        #pragma warning restore CS8602 // Dereference of a possibly null reference.
+        #nullable restore
     }
     public ListNode? ReverseKGroup(ListNode head, int k) {
         // sanity check edge case
