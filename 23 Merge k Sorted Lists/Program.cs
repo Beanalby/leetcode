@@ -38,6 +38,7 @@ class Program
             ],
             [],
             [null],
+            [null, new ListNode(1)],
         ];
         var s = new Solution();
         foreach(var p in problems) {
@@ -60,9 +61,6 @@ public class Solution {
             return null;
         }
         if(lists.Length == 0) {
-            return null;
-        }
-        if(lists[0]==null) {
             return null;
         }
         #endregion
