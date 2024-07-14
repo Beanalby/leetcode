@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21 - Merge Two Sorted Lists
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22 - Generate Parenthesis", "22 - Generate Parenthesis\22 - Generate Parenthesis.csproj", "{2A6D702C-0B32-4E17-A011-08FE2C63AAFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23 Merge k Sorted Lists", "23 Merge k Sorted Lists\23 Merge k Sorted Lists.csproj", "{E63CE702-71FD-40BC-9818-34FE9FC98856}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{2A6D702C-0B32-4E17-A011-08FE2C63AAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A6D702C-0B32-4E17-A011-08FE2C63AAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A6D702C-0B32-4E17-A011-08FE2C63AAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E63CE702-71FD-40BC-9818-34FE9FC98856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E63CE702-71FD-40BC-9818-34FE9FC98856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E63CE702-71FD-40BC-9818-34FE9FC98856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E63CE702-71FD-40BC-9818-34FE9FC98856}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
