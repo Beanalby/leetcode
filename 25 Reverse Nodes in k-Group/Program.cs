@@ -39,8 +39,11 @@ class Program
     static void Main(string[] args)
     {
         List<(ListNode?,int)> problems = [
+            (new ListNode([1,2]), 2),
+            (new ListNode([1,2,3,4,5]), 1),
             (new ListNode([1,2,3,4,5]), 2),
             (new ListNode([1,2,3,4,5]), 3),
+            (new ListNode([1,2,3,4,5,6]), 3),
             (new ListNode([1,2]), 3),
         ];
         Solution s = new();
@@ -78,16 +81,23 @@ public class Solution {
             top.next = b;
             b.next = a;
             d.next = c;
-            c = c.next;
-            b = d.next;
-            a = top.next;
             k--;
+            if(k>1) {
+                // prep for next swap
+                c = c.next;
+                b = d.next;
+                a = top.next;
+            }
         }
         return true;
         #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
         #pragma warning restore CS8602 // Dereference of a possibly null reference.
     }
     public ListNode? ReverseKGroup(ListNode head, int k) {
+        // sanity check edge case
+        if(k == 1) {
+            return head;
+        }
         ListNode dummy = new ListNode(-1, head);
         ListNode? current = dummy;
         int i;
