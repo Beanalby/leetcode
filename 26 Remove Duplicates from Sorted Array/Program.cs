@@ -5,7 +5,12 @@ class Program
     static void Main(string[] args)
     {
         int[][] problems = [
+            [1],
+            [1,1],
+            [1,2],
             [1,1,2],
+            [1,2,2],
+            [2,2,2],
             [0,0,1,1,1,2,2,3,3,4],
         ];
         Solution s = new();
@@ -19,12 +24,8 @@ class Program
 
 public class Solution {
     public int RemoveDuplicates(int[] nums) {
-        int len = nums.Length;
-        if(len<= 1) {
-            return len;
-        }
-        int near=0, far=1, i=0, lastSeen=nums[i];
-        while(far!=len) {
+        int len = nums.Length, near=0, far=1;
+        while(far<len) {
             if(nums[near] != nums[far]) {
                 nums[++near] = nums[far];
             }
