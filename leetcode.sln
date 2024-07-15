@@ -55,6 +55,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "28 Find the Index of the Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "29 - Divided Two Integers", "29 - Divided Two Integers\29 - Divided Two Integers.csproj", "{4504745C-6752-41BF-B085-3BC1AC26F6E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29 - Divided Two Integers.Test", "29 - Divided Two Integers.Test\29 - Divided Two Integers.Test.csproj", "{2DD80DD1-BE5C-47C2-BF6F-C9DCE4778447}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{4504745C-6752-41BF-B085-3BC1AC26F6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4504745C-6752-41BF-B085-3BC1AC26F6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4504745C-6752-41BF-B085-3BC1AC26F6E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD80DD1-BE5C-47C2-BF6F-C9DCE4778447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD80DD1-BE5C-47C2-BF6F-C9DCE4778447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD80DD1-BE5C-47C2-BF6F-C9DCE4778447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD80DD1-BE5C-47C2-BF6F-C9DCE4778447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
